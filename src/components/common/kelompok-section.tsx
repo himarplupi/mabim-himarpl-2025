@@ -6,6 +6,7 @@ import Mascot from "@/assets/mascots/default.svg";
 export function KelompokSection() {
   return (
     <section
+      id="kelompok"
       className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)]
  text-center flex min-h-screen h-[812px] w-full flex-col items-center pt-[140px] relative overflow-clip"
     >

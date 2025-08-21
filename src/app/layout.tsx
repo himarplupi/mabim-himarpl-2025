@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 };
 
 import { fontE, fontI, fontJ } from "./fonts";
+import { ReactLenis } from "@/components/react-lenis";
 
 export default function RootLayout({
   children,
@@ -29,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${geistSans.variable} ${montserrat.variable} ${fontE.variable} ${fontI.variable} ${fontJ.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ReactLenis>{children}</ReactLenis>
+      </body>
     </html>
   );
 }
