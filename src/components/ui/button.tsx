@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const Button = ({ title }: { title: string }) => {
   return (
-    <div className="relative p-[6px]">
+    <div className="relative p-[6px] z-[6]">
       <Image className="absolute top-0 left-0" src={borderCorner} alt="ornaments" />
       <Image className="absolute top-0 right-0 rotate-90" src={borderCorner} alt="ornaments" />
       <Image className="absolute bottom-0 left-0 rotate-[270deg]" src={borderCorner} alt="ornaments" />
