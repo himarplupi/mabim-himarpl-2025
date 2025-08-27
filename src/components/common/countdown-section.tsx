@@ -4,7 +4,7 @@ import Orbit from "@/assets/ornaments/orbit.svg";
 import Mascot from "@/assets/mascots/shield.svg";
 export function CountdownSection() {
   return (
-    <section id="countdown" className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_0.43%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex min-h-screen h-[812px] w-full flex-col items-center pt-[120px] relative overflow-clip">
+    <section id="countdown" className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_0.43%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex h-screen min-h-[812px] w-full flex-col items-center pt-[120px] relative overflow-clip">
       <h3 className="font-ethno text-white text-[40px] z-[6]">COUNTDOWN</h3>
       <Image src={Bg} alt="bg pattern" className="absolute left-20 top-5 opacity-[8%]  inset-0  w-full h-full object-cover z-[1] scale-[175%] bg-center" />{" "}
       <div className="absolute bottom-0 w-full h-[365px]">

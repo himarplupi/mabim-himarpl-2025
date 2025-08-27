@@ -34,7 +34,7 @@ const timeline = [
 
 export function TimelineSection() {
   return (
-    <section id="timeline" className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex  min-h-[812px] w-full flex-col items-center pt-[104px] relative overflow-clip">
+    <section id="timeline" className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex  min-h-[812px] w-full flex-col items-center pt-[104px] relative overflow-clip h-screen">
       <h3 className="font-ethno text-white text-[32px] z-[6]">TIMELINE</h3>
       <ul className="z-[7] mt-10">
         {timeline.map((item, index) => {

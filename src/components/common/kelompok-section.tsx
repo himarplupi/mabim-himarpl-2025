@@ -8,7 +8,7 @@ export function KelompokSection() {
     <section
       id="kelompok"
       className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)]
- text-center flex min-h-screen h-[812px] w-full flex-col items-center pt-[140px] relative overflow-clip"
+ text-center flex min-h-[812px] h-screen w-full flex-col items-center pt-[140px] relative overflow-clip"
     >
       <div className="relative flex w-full items-center flex-col gap-6 z-[6]">
         <Image src={card} alt="card" className="absolute -bottom-10 w-[343px] z-[5]" />

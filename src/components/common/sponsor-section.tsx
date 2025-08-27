@@ -46,7 +46,7 @@ const SponsorMediaPartnerCard = ({ logo, size = "md" }: { logo: StaticImageData 
 
 export function SponsorSection() {
   return (
-    <section className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex  min-h-[812px] w-full flex-col items-center pt-[220px] relative overflow-clip">
+    <section className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex  min-h-[812px] w-full flex-col items-center pt-[220px] relative overflow-clip h-screen">
       <span className=" bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[40px]/[40px]">
         Sponsor <br /> & <br /> Medpart
       </span>
