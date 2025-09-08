@@ -38,3 +38,45 @@
   pointer-events: none; /* disabled:pointer-events-none */
   opacity: 0.5; /* disabled:opacity-50 */
 }
+
+html {
+  scrollbar-width: none;
+  scrollbar-color: #3243a6 #ffffff;
+}
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+  transform-origin: top;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+  transform-origin: top;
+}
+
+.accordionContent[data-state="open"] {
+  animation: accordion-down 0.2s ease-out;
+  transform-origin: top;
+}
+
+.accordionContent[data-state="closed"] {
+  animation: accordion-up 0.2s ease-out;
+  transform-origin: top;
+}

@@ -50,12 +50,12 @@ export function SponsorSection() {
       <span className=" bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[40px]/[40px]">
         Sponsor <br /> & <br /> Medpart
       </span>
-      <Marquee pauseOnHover direction="left" className="mt-16">
+      <Marquee pauseOnHover direction="left" className="mt-16 z-[6]">
         {firstRow.map((sponsorMediaPartner) => (
           <SponsorMediaPartnerCard size="lg" key={sponsorMediaPartner.name} logo={sponsorMediaPartner.logo} />
         ))}
       </Marquee>
-      <Marquee pauseOnHover direction="right">
+      <Marquee pauseOnHover direction="right" className="z-[6]">
         {secondRow.map((sponsorMediaPartner) => (
           <SponsorMediaPartnerCard size="lg" key={sponsorMediaPartner.name} logo={sponsorMediaPartner.logo} />
         ))}
