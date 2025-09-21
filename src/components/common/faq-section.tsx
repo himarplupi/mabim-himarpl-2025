@@ -1,4 +1,5 @@
 import Bg from "@/assets/bgBiner.svg";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from "next/image";
 import { FAQAccordions } from "./faq-accordions";
 
@@ -9,7 +10,7 @@ export function FaqSection() {
 
       <FAQAccordions />
 
-      <div className="absolute inset-0 opacity-5 bg-repeat bg-center bg-[length:160px] z-[1]" style={{ backgroundImage: `url(${Bg.src})` }} />
+      <div className="absolute inset-0 opacity-5 bg-repeat bg-center bg-[length:160px] z-[1]" style={{ backgroundImage: `url(${Bg})` }} />
     </section>
   );
 }

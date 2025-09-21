@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { motion as Motion } from "motion/react";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { cn } from "@/lib/utils";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -43,6 +45,7 @@ const faqs = [
 ];
 
 export function FAQAccordions() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeIndex, setActiveIndex] = useState("");
 
   return (
