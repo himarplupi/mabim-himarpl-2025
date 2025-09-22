@@ -6,27 +6,27 @@ import { useScroll, motion as Motion } from "motion/react";
 import { useRef } from "react";
 const timeline = [
   {
-    date: "2025-07-27",
+    date: "2025-10-04",
     title: "Technical Meeting",
     desc: "",
   },
   {
-    date: "2025-10-04",
+    date: "2025-10-12",
     title: "Day-I",
     desc: "",
   },
   {
-    date: "2025-10-05",
+    date: "2025-10-18",
     title: "Day-II",
     desc: "",
   },
   {
-    date: "2025-10-11",
+    date: "2025-10-19",
     title: "Day-III",
     desc: "",
   },
   {
-    date: "2025-10-18",
+    date: "2025-11-02",
     title: "Day-IV",
     desc: "",
   },
@@ -71,7 +71,7 @@ function TimelineItem({ item, index, curDate, nextDate }: TimelineItemComponentP
   });
   return (
     <div key={index} ref={ref} className="flex items-start gap-6">
-      <div className="flex items-center flex-col">
+      <div className="flex items-center justify-center flex-col">
         {isFutureDate ? (
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
             <path d="M6.66663 21.9459L15.7751 28L24.6666 21.9459L24.6666 9.62162L15.7751 4L6.66663 9.62162L6.66663 21.9459Z" stroke="url(#paint1_linear_463_244)" strokeWidth="0.428571" />
@@ -101,7 +101,7 @@ function TimelineItem({ item, index, curDate, nextDate }: TimelineItemComponentP
             </defs>
           </svg>
         )}
-        <Motion.div className="flex flex-col origin-top h-auto min-h-24  w-fit md:w-12" style={{ scaleY: scrollYProgress }}>
+        <Motion.div className="flex flex-col items-center origin-top h-auto min-h-24  w-fit md:w-12" style={{ scaleY: scrollYProgress }}>
           <svg width="12" height="12" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="fadeGradient" x1="1" y1="0" x2="0" y2="0">
