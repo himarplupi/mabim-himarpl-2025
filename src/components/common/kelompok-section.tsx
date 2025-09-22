@@ -121,7 +121,7 @@ export function KelompokSection() {
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent
           tabIndex={-1}
-          className="bg-[radial-gradient(circle_at_center_bottom,_#8166e3_0%,_rgba(1,0,48,0.4)_100%)]   overflow-hidden py-7 border border-[#8166E3]  backdrop-blur-[150px] h-full shadow-[0_0_150px_rgba(172,143,219,0.4)]"
+          className="bg-[radial-gradient(circle_at_center_bottom,_#8166e3_0%,_rgba(1,0,48,0.4)_100%)]   overflow-hidden py-7 border border-[#8166E3] md:px-0 px-6 backdrop-blur-[150px] h-full shadow-[0_0_150px_rgba(172,143,219,0.4)]"
         >
           <DialogTitle hidden>sst</DialogTitle>
           <DialogDescription hidden>im mysterious</DialogDescription>
