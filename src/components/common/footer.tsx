@@ -64,11 +64,13 @@ export function Footer() {
                 <Link
                   href={link.href}
                   className={cn("inline-block font-bonobo text-lg leading-5 text-white hover:underline", {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     "pointer-events-none opacity-50 hover:no-underline": (link as any).disabled,
                   })}
                   target={external ? "_blank" : undefined}
                   rel={external ? "noopener noreferrer" : undefined}
                   onClick={(e) => {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     if ((link as any).disabled) {
                       e.preventDefault();
                       return;

@@ -6,6 +6,7 @@ import LogoDevoria from "@/assets/logo/devoria.svg";
 import LogoHIMARPL from "@/assets/logo/himarpl.svg";
 import LogoUPI from "@/assets/logo/cibiru.svg";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { cn } from "@/lib/utils";
 
 import { SiGmail, SiInstagram, SiTiktok, SiYoutube } from "@icons-pack/react-simple-icons";

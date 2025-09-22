@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import TimerDot from "@/assets/ornaments/timer-dot.svg";
