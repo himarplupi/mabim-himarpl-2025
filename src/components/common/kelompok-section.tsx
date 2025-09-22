@@ -28,8 +28,6 @@ export function KelompokSection() {
     } else {
       lenis?.start();
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, isNotFound]);
 
   const handleSearch = () => {
