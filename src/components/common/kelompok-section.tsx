@@ -125,7 +125,7 @@ export function KelompokSection() {
         >
           <DialogTitle hidden>sst</DialogTitle>
           <DialogDescription hidden>im mysterious</DialogDescription>
-          <div className="flex w-full flex-col items-center text-white">
+          <div className="flex w-full flex-col items-center justify-center text-center text-white">
             <span className="font-ethno text-[21px]">{`Group ${group?.id}`}</span>
             <span className="font-montserrat font-medium">{group?.name}</span>
             <span className="font-montserrat font-bold">
@@ -141,8 +141,8 @@ export function KelompokSection() {
           <div className="bg-[linear-gradient(60deg,rgba(1,0,48,0.8)0%,rgba(2,0,99,0.6)50%,rgba(1,0,48,0.8)100%)] border border-[#B789FF] max-w-[688px] w-full flex flex-col gap-5  md:p-6 p-2 backdrop-blur-[73px]">
             <div className="flex flex-col gap-5">
               <div className="flex justify-between h-[52px] gap-4">
-                <div className="flex flex-col gap-2 flex-shrink-0">
-                  <p className="font-ethno bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent text-[14px]">{group?.mentor.name}</p>
+                <div className="flex flex-col gap-2 ">
+                  <p className="font-ethno bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent text-[14px] break-words">{group?.mentor.name}</p>
                   <div className="flex gap-2">
                     <div className="border border-[#AC8FDB] bg-radial from-[#7226FF] to-[#010030] p-0.5 w-[18px] h-[18px]">
                       <Image src={Gun} alt={"Gun"} />
@@ -167,7 +167,7 @@ export function KelompokSection() {
               </div>
             </div>
 
-            <p className="font-montserrat text-white">{group?.mentor.metadata.description}</p>
+            <p className="font-montserrat text-white md:text-base text-[12px]">{group?.mentor.metadata.description}</p>
           </div>
         </DialogContent>
       </Dialog>
