@@ -21,8 +21,8 @@ export function HeroSection() {
         <p className="font-montserrat text-[14px]/[18px] text-[#FFE5F1]">Selain itu, kegiatan ini juga bertujuan untuk menumbuhkan rasa memiliki terhadap jurusan serta memupuk jiwa kepemimpinan dan keorganisasian sejak dini.</p>
       </div>
       <div className="flex items-center gap-10 mt-[52px] z-[5]">
-        <Button title="Twibbon" />
-        <Button title="Booklet" />
+        <Button title="Twibbon" classN="" />
+        <Button title="Booklet" classN="" />
       </div>
       <div className="flex items-center select-none gap-0 relative ">
         <Image src={SmileMascot} alt="Mascot" className="w-[204px]  h-[204px] z-[6]" />
