@@ -9,9 +9,13 @@ import { motion as Motion, useInView } from "motion/react";
 
 import LogoMabim from "@/app/icon.svg";
 import VectorNav from "@/assets/ornaments/VectorNav.svg";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import ContainerNav from "@/assets/ornaments/Container.svg";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { url } from "inspector";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { cn } from "@/lib/utils";
+
 const navLinks = [
   {
     name: "Beranda",
@@ -38,6 +42,7 @@ const navLinks = [
 export function Navbar() {
   const lenis = useLenis();
   const pathname = usePathname();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5, margin: "100px" });

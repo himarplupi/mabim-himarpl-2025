@@ -40,11 +40,9 @@ export function HeroSection() {
           Selain itu, kegiatan ini juga bertujuan untuk menumbuhkan rasa memiliki terhadap jurusan serta memupuk jiwa kepemimpinan dan keorganisasian sejak dini.
         </p>
       </div>
-
-      {/* Buttons */}
-      <div className="flex items-center gap-8 md:gap-10 mt-[50px] md:mt-[38px] z-[5]">
-        <Button title="Twibbon" />
-        <Button title="Booklet" />
+      <div className="flex items-center gap-10 mt-[52px] z-[5]">
+        <Button title="Twibbon" classN="" />
+        <Button title="Booklet" classN="" />
       </div>
 
       {/* Mascot */}
