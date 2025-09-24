@@ -17,13 +17,13 @@ const events = [
 export default function CountdownTimerTabs() {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <section className="flex flex-col items-center w-full max-w-xl mx-auto py-6">
-      <div className="flex justify-center gap-0 md:gap-2 mb-6 w-full bg-[#1B0A3D]/60 rounded-lg border border-[#6C2EF2] px-2 py-2">
+    <section className="flex flex-col items-center md:w-full w-xl mx-auto py- ">
+      <div className="flex justify-center gap-0 md:gap-5 lg:gap-20 mb-6 w-full h-20 bg-[#1B0A3D]/60 rounded-sm border border-white/50 px-2 py-2">
         {events.map((event, idx) => (
           <button
             key={event.label}
             onClick={() => setActiveTab(idx)}
-            className={`relative flex items-center justify-center px-6 py-2 font-bold text-base md:text-lg rounded-md transition-all duration-300 border-none outline-none focus:outline-none ${activeTab === idx ? "bg-[#6C2EF2]/80 text-white" : "bg-transparent text-[#E5E5E5]"}`}
+            className={`relative flex items-center justify-center px-4 py-2 font-bold lg:w-[360px] text-base md:text-lg rounded-md transition-all duration-300 border-none outline-none focus:outline-none ${activeTab === idx ? "bg-[#6C2EF2]/80 text-white" : "bg-transparent text-[#E5E5E5]"}`}
             style={{ minWidth: "80px" }}
           >
             {activeTab === idx && (
@@ -35,6 +35,7 @@ export default function CountdownTimerTabs() {
           </button>
         ))}
       </div>
+      <div className="w-full h-[0.1px] bg-white mb-8 mt-5"></div>
       <CountdownTimer targetDate={events[activeTab].date} />
     </section>
   );
@@ -65,7 +66,7 @@ function CountdownTimer({ targetDate }: { targetDate: string }) {
       transition={{ type: "spring", stiffness: 120, damping: 12 }}
       className="flex items-center justify-center w-full"
     >
-      <div className="w-full flex items-center justify-center bg-[#ffffff]/10 rounded-xl border border-[#6C2EF2] py-8 px-4 shadow-lg">
+      <div className="w-full md:w-[820px] md:h-[200px] flex items-center justify-center bg-[#ffffff]/10 rounded-sm border border-white/50 py-8 px-4 shadow-[inset_0_4px_6px_rgba(255,255,255,0.4)]">
         {isExpired ? (
           <ExpiredNotice />
         ) : (
@@ -91,7 +92,7 @@ function ShowCounter({ days, hours, minutes, seconds }: { days?: number; hours?:
     return null;
   }
   return (
-    <div className="flex items-center justify-center gap-0 md:gap-2 w-full">
+    <div className="flex items-center justify-center gap-0 md:gap-2 w-[360px]">
       <DateTimeDisplay value={days} type="Hari" />
       <Separator />
       <DateTimeDisplay value={hours} type="Jam" />
@@ -105,7 +106,7 @@ function ShowCounter({ days, hours, minutes, seconds }: { days?: number; hours?:
 
 function Separator() {
   return (
-    <span className="mx-2 text-3xl md:text-4xl lg:text-5xl font-bold text-white opacity-60">:</span>
+    <span className="mx-2 text-3xl md:text-4xl lg:text-7xl font-bold text-white opacity-60">:</span>
   );
 }
 
@@ -113,7 +114,7 @@ function DateTimeDisplay({ value, type }: { value?: number; type: string }) {
   return (
     <div className="flex flex-col items-center justify-center w-16 md:w-24">
       <motion.p
-        className="font-bold text-4xl md:text-5xl lg:text-6xl text-white drop-shadow-lg"
+        className="font-bold text-4xl md:text-5xl lg:text-8xl text-white drop-shadow-lg"
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", damping: 10, stiffness: 100, mass: 1 }}
       >
