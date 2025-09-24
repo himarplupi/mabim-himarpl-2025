@@ -55,7 +55,15 @@ export function HeroSection() {
           {/* <Image src={SmileMascot} alt="Mascot" className="w-[204px]  h-[204px] z-[6]" /> */}
           {/* <Image src={SmileMascot} alt="Mascot" className="w-[204px]  h-[204px] z-[6]" /> */}
 
-          <span className="font-montserrat font-black -ml-12 bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent text-[52px] md:text-[62px] lg:text-[84px] z-[5]  text-start left-[160px] ">MABIM<br/> RPL</span>
+          <div>
+            <p className="font-montserrat font-black -ml-12 bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent text-[52px] md:text-[62px] lg:text-[84px] z-[5] text-start left-[160px]">
+            MABIM
+            </p>
+            <p className="text-transparent text-[48.42px]/[44PX]">
+
+            </p>
+          </div>
+          {/* <span className="font-montserrat font-black -ml-12 bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent text-[52px] md:text-[62px] lg:text-[84px] z-[5]  text-start left-[160px] ">MABIM<br/> RPL</span> */}
           <span className=" text-transparent  text-[48.42px]/[44px]  z-[5] w-[263px] md:w-[280px] text-start ">MABIM<br/>RPL</span>
 
           <div className="absolute  flex left-[260px] bottom-[50px] z-[6]">
