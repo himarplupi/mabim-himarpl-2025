@@ -62,7 +62,7 @@ export function KelompokSection() {
         </div>
 
         <div
-          className="z-[6] bg-white/20 gap-[-8px] w-[311px] md:w-[679px] md:h-[80px] py-3 px-4 border-[#a2a2a2] border-[0.3px] flex items-center 
+          className="z-[6] bg-white/20 gap-[-8px] w-[311px] md:w-[667px] md:h-[80px] py-3 px-4 border-[#a2a2a2] border-[0.3px] flex items-center 
 "
         >
           <input
