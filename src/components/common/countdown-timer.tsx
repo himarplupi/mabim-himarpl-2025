@@ -17,8 +17,8 @@ const events = [
 export default function CountdownTimerTabs() {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <section className="flex flex-col items-center md:w-full w-xl mx-auto py- ">
-      <div className="flex justify-center gap-0 md:gap-5 lg:gap-20 mb-6 w-full h-20 bg-[#1B0A3D]/60 rounded-sm border border-white/50 px-2 py-2">
+    <section className="flex flex-col items-center md:w-full w-xl mx-auto ">
+      <div className="flex justify-center gap-0 md:gap-5 lg:gap-20 mb-6 sm:mb-12 w-full h-20 bg-[#1B0A3D]/60 rounded-sm border border-white/50 px-2 py-2">
         {events.map((event, idx) => (
           <button
             key={event.label}
@@ -35,7 +35,7 @@ export default function CountdownTimerTabs() {
           </button>
         ))}
       </div>
-      <div className="w-full h-[0.1px] bg-white mb-8 mt-5"></div>
+      {/* <div className="w-full h-[0.1px] bg-white mb-8 mt-5"></div> */}
       <CountdownTimer targetDate={events[activeTab].date} />
     </section>
   );
@@ -46,32 +46,17 @@ function CountdownTimer({ targetDate }: { targetDate: string }) {
   const [isExpired, setIsExpired] = useState(false);
 
   useEffect(() => {
-    if (
-      typeof days === "undefined" ||
-      typeof hours === "undefined" ||
-      typeof minutes === "undefined" ||
-      typeof seconds === "undefined"
-    ) {
+    if (typeof days === "undefined" || typeof hours === "undefined" || typeof minutes === "undefined" || typeof seconds === "undefined") {
       return;
     }
-    const countdown =
-      days * 24 * 60 * 60 + hours * 60 * 60 + minutes * 60 + seconds;
+    const countdown = days * 24 * 60 * 60 + hours * 60 * 60 + minutes * 60 + seconds;
     setIsExpired(countdown <= 0);
   }, [days, hours, minutes, seconds]);
 
   return (
-    <motion.div
-      initial={{ scale: 0.7, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 120, damping: 12 }}
-      className="flex items-center justify-center w-full"
-    >
+    <motion.div initial={{ scale: 0.7, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 120, damping: 12 }} className="flex items-center justify-center w-full">
       <div className="w-full md:w-[820px] md:h-[200px] flex items-center justify-center bg-[#ffffff]/10 rounded-sm border border-white/50 py-8 px-4 shadow-[inset_0_4px_6px_rgba(255,255,255,0.4)]">
-        {isExpired ? (
-          <ExpiredNotice />
-        ) : (
-          <ShowCounter days={days} hours={hours} minutes={minutes} seconds={seconds} />
-        )}
+        {isExpired ? <ExpiredNotice /> : <ShowCounter days={days} hours={hours} minutes={minutes} seconds={seconds} />}
       </div>
     </motion.div>
   );
@@ -87,7 +72,9 @@ function ExpiredNotice() {
 
 function ShowCounter({ days, hours, minutes, seconds }: { days?: number; hours?: number; minutes?: number; seconds?: number }) {
   const [isClient, setIsClient] = useState(false);
-  useEffect(() => { setIsClient(true); }, []);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   if (!isClient) {
     return null;
   }
@@ -105,24 +92,16 @@ function ShowCounter({ days, hours, minutes, seconds }: { days?: number; hours?:
 }
 
 function Separator() {
-  return (
-    <span className="mx-2 text-3xl md:text-4xl lg:text-7xl font-bold text-white opacity-60">:</span>
-  );
+  return <span className="mx-2 text-3xl md:text-4xl lg:text-7xl font-bold text-white opacity-60">:</span>;
 }
 
 function DateTimeDisplay({ value, type }: { value?: number; type: string }) {
   return (
     <div className="flex flex-col items-center justify-center w-16 md:w-24">
-      <motion.p
-        className="font-bold text-4xl md:text-5xl lg:text-8xl text-white drop-shadow-lg"
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", damping: 10, stiffness: 100, mass: 1 }}
-      >
+      <motion.p className="font-bold text-4xl md:text-5xl lg:text-8xl text-white drop-shadow-lg" animate={{ y: 0, opacity: 1 }} transition={{ type: "spring", damping: 10, stiffness: 100, mass: 1 }}>
         {(value ?? 0) < 10 ? `0${value}` : value}
       </motion.p>
-      <span className="-mt-1 text-base md:text-lg lg:text-xl lowercase opacity-80 text-white tracking-wide">
-        {type}
-      </span>
+      <span className="-mt-1 text-base md:text-lg lg:text-xl lowercase opacity-80 text-white tracking-wide">{type}</span>
     </div>
   );
 }
