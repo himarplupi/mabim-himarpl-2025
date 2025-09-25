@@ -11,8 +11,11 @@ import Gun from "@/assets/gun.svg";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/Dialog";
 import { type GroupMabim, groupMabim, type Mentee } from "@/components/common/group-mabim";
 
+import { motion as Motion } from "motion/react";
+
 import { SiWhatsapp } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
+import { GlitchText } from "../ui/glitch-effects";
 
 export function KelompokSection() {
   const lenis = useLenis();
@@ -84,8 +87,8 @@ export function KelompokSection() {
 
         <Button title="Launch" disabled={name.length === 0} onClick={handleSearch} classN="md:w-[667px] md:h-[80px]" />
       </div>
-      <Image src={Bg} alt="bg pattern" className="absolute left-20 top-5 opacity-[8%]  inset-0  w-full h-full object-cover z-[1] scale-[175%] bg-center" />{" "}
-      <div className="absolute -top-28  bg-gradient-to-b from-[#010030] to-[#030096] w-full h-[234px] rounded-b-full blur-2xl"></div>
+      <Image src={Bg} alt="bg pattern" className="absolute sm:hidden left-20 top-5 opacity-[8%]  inset-0  w-full h-full object-cover z-[1] scale-[175%] bg-center" />{" "}
+      <div className="absolute -top-28 sm:hidden  bg-gradient-to-b from-[#010030] to-[#030096] w-full h-[234px] rounded-b-full blur-2xl"></div>
       <div className="absolute bottom-0 w-full h-[200px]">
         <Image src={Mascot} alt="mascot" className="absolute bottom-0 -left-8 w-[245px] h-[245px] z-[6] scale-150" />
 
@@ -99,13 +102,41 @@ export function KelompokSection() {
           <DialogTitle className="font-ethno text-center py-6 bg-[#680000]/40 w-full border border-[#FF0000] relative shadow-[inset_0_0_37px_0_#FF0000] backdrop-blur-[56px] mb-9">
             <span className="bg-radial-[at_50%_50%] from-white to-[#B90808] bg-clip-text text-transparent text-2xl md:text-[55px]">Error</span>
 
-            <div className="absolute bg-[#A11515] md:w-9 md:h-9 w-4 h-4 md:top-6 md:left-12 top-3 left-5"></div>
-            <div className="absolute bg-[#702929] md:w-[55px] w-6 h-6 md:h-[55px] md:bottom-3 md:left-32 bottom-1.5 left-14"></div>
-            <div className="absolute bg-[#790000] md:w-8 md:h-8 w-3 h-3 md:top-4 md:left-[238px] top-[7px] left-[102px]"></div>
-            <div className="absolute bg-[#C60000] md:w-12 md:h-0.5 w-5 h-[1px] m:top-5 md:left-64 top-2 left-[109px]"></div>
-            <div className="absolute bg-[#C74343] md:w-5 md:h-5 w-2 h-2 md:bottom-2 md:left-80 bottom-1 left-[137px]"></div>
-            <div className="absolute bg-[#721717] md:w-16 md:h-16 w-7 h-7  md:top-3 md:right-10 top-2 right-[18px]"></div>
-            <div className="absolute bg-[#E60808] md:w-[72px] w-8 h-0.5 md:top-11 md:right-[79px] top-5 right-8"></div>
+            <Motion.div
+              animate={{ y: [0, -5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+              className="absolute bg-[#A11515] md:w-9 md:h-9 w-4 h-4 md:top-6 md:left-12 top-3 left-5"
+            ></Motion.div>
+            <Motion.div
+              animate={{ x: [0, -3, 0] }}
+              transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+              className="absolute bg-[#702929] md:w-[55px] w-6 h-6 md:h-[55px] md:bottom-3 md:left-32 bottom-1.5 left-14"
+            ></Motion.div>
+            <Motion.div
+              animate={{ x: [0, 6, 0] }}
+              transition={{ duration: 6, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+              className="absolute bg-[#790000] md:w-8 md:h-8 w-3 h-3 md:top-4 md:left-[238px] top-[7px] left-[102px]"
+            ></Motion.div>
+            <Motion.div
+              animate={{ x: [0, 4, 0] }}
+              transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+              className="absolute bg-[#C60000] md:w-12 md:h-0.5 w-5 h-[1px] m:top-5 md:left-64 top-2 left-[109px]"
+            ></Motion.div>
+            <Motion.div
+              animate={{ y: [0, 2, 0] }}
+              transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+              className="absolute bg-[#C74343] md:w-5 md:h-5 w-2 h-2 md:bottom-2 md:left-80 bottom-1 left-[137px]"
+            ></Motion.div>
+            <Motion.div
+              animate={{ x: [0, 3, 0] }}
+              transition={{ duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+              className="absolute bg-[#721717] md:w-16 md:h-16 w-7 h-7  md:top-3 md:right-10 top-2 right-[18px]"
+            ></Motion.div>
+            <Motion.div
+              animate={{ x: [0, 7, 0] }}
+              transition={{ duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+              className="absolute bg-[#E60808] md:w-[72px] w-8 h-0.5 md:top-11 md:right-[79px] top-5 right-8"
+            ></Motion.div>
           </DialogTitle>
 
           <DialogDescription className="text-center p-6 flex flex-col justify-between bg-[#680000]/40 w-full border border-[#FF0000]  shadow-[inset_0_0_37px_0_#FF0000] backdrop-blur-[56px] text-white md:text-3xl text-base uppercase gap-8">
@@ -114,7 +145,9 @@ export function KelompokSection() {
               <span className="absolute inset-0 text-red-500 blur-sm  mix-blend-multiply">Nama yang kamu masukkan salah! harap masukkan nama yang benar dengan nama lengkap.</span>
             </span>
 
-            <span className="font-jumbo relative">- Anonymous -</span>
+            <span className="font-jumbo relative">
+              <GlitchText text="- Anonymous -" className="font-jumbo" />
+            </span>
           </DialogDescription>
         </DialogContent>
       </Dialog>
