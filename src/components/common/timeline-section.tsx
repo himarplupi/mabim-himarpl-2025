@@ -34,7 +34,11 @@ const timeline = [
 
 export function TimelineSection() {
   return (
-    <section id="timeline" className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex  min-h-[812px] w-full flex-col items-center pt-[104px] relative overflow-clip h-screen">
+    <section
+      id="timeline"
+      className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)] sm:bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)]
+ text-center flex  min-h-[812px] w-full flex-col items-center pt-[104px] relative overflow-clip h-screen"
+    >
       <h3 className="font-ethno text-white text-[32px] z-[6]">TIMELINE</h3>
       <ul className="z-[7] mt-10">
         {timeline.map((item, index) => {
@@ -42,9 +46,9 @@ export function TimelineSection() {
           return <TimelineItem item={item} key={index} index={index} curDate={new Date()} nextDate={nextDate} />;
         })}
       </ul>
-      <Image src={Bg} alt="bg pattern" className="absolute left-20 top-5 opacity-[8%]  inset-0  w-full h-full object-cover z-[1] scale-[175%] bg-center" />{" "}
-      <Image src={OrnamentPattern} alt="ornaments" className="absolute top-0 rotate-[320deg] w-full h-fit z-[1] scale-[350%]" />
-      <div className="absolute -top-14  bg-gradient-to-b from-[#010030] to-[#030096] w-[534px] h-[234px] rounded-full blur-2xl z-[2] opacity-90"></div>
+      <Image src={Bg} alt="bg pattern" className="absolute left-20 top-5 opacity-[8%]  inset-0 sm:hidden w-full h-full object-cover z-[1] scale-[175%] bg-center" />{" "}
+      <Image src={OrnamentPattern} alt="ornaments" className="absolute top-0 rotate-[320deg] w-full h-fit z-[1] sm:hidden scale-[350%]" />
+      <div className="absolute -top-14 sm:hidden  bg-gradient-to-b from-[#010030] to-[#030096] w-[534px] h-[234px] rounded-full blur-2xl z-[2] opacity-90"></div>
     </section>
   );
 }

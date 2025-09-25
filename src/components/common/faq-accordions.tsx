@@ -49,7 +49,7 @@ export function FAQAccordions() {
   const [activeIndex, setActiveIndex] = useState("");
 
   return (
-    <AccordionPrimitive.Root defaultValue="item-1" onValueChange={setActiveIndex} type="single" collapsible className="min-w-[343px]  mx-4 max-w-screen-md font-montserrat text-white z-[6] ">
+    <AccordionPrimitive.Root defaultValue="item-1" onValueChange={setActiveIndex} type="single" collapsible className="w-full max-w-4xl mx-auto px-6 font-montserrat text-white z-[6]">
       {faqs.map((faq) => (
         <AccordionPrimitive.Item value={faq.id} key={faq.id} className="accordionItem  overflow-hidden rounded-md border border-white/20">
           <AccordionPrimitive.Header className="flex">

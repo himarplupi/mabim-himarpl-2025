@@ -11,34 +11,25 @@ import React from "react";
 
 export default function Home() {
   return (
-  <main id="main" className="relative min-h-screen overflow-hidden">
-      <div>
-        <Header />
-      </div>
-      <div>
-        <HeroSection />
-      </div>
-      <div>
-        <KelompokSection />
-      </div>
-      <div>
-        <CountdownSection />
-      </div>
-      <div>
-        <TimelineSection />
-      </div>
-      <div>
-        <FaqSection />
-      </div>
-      <div>
-        <SponsorSection />
-      </div>
-      <div>
-        <Footer />
-      </div>
-      <div>
-        <GlobalFooter />
-      </div>
+    <main id="main" className="relative min-h-screen overflow-hidden">
+      <Header />
+
+      <HeroSection />
+
+      <KelompokSection />
+
+      <CountdownSection />
+
+      <TimelineSection />
+
+      <FaqSection />
+
+      <SponsorSection />
+
+      <Footer />
+
+      <GlobalFooter />
+
       {/* ...existing page content... */}
     </main>
   );
