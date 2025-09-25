@@ -51,13 +51,13 @@ export function SponsorSection() {
         Sponsor <br /> & <br /> Medpart
       </span>
       <Marquee pauseOnHover direction="left" className="mt-16 z-[6]">
-        {firstRow.map((sponsorMediaPartner) => (
-          <SponsorMediaPartnerCard size="lg" key={sponsorMediaPartner.name} logo={sponsorMediaPartner.logo} />
+        {Array(3).fill(firstRow).flat().map((sponsorMediaPartner, idx) => (
+          <SponsorMediaPartnerCard size="lg" key={sponsorMediaPartner.name + idx} logo={sponsorMediaPartner.logo} />
         ))}
       </Marquee>
       <Marquee pauseOnHover direction="right" className="z-[6]">
-        {secondRow.map((sponsorMediaPartner) => (
-          <SponsorMediaPartnerCard size="lg" key={sponsorMediaPartner.name} logo={sponsorMediaPartner.logo} />
+        {Array(3).fill(secondRow).flat().map((sponsorMediaPartner, idx) => (
+          <SponsorMediaPartnerCard size="lg" key={sponsorMediaPartner.name + idx} logo={sponsorMediaPartner.logo} />
         ))}
       </Marquee>
       <Image src={Mascot} alt="mascot" className="absolute top-0 -left-[70px] w-[245px] h-[245px] z-[6] rotate-[345deg]" />
