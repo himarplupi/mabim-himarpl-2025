@@ -1,18 +1,48 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion as Motion } from "motion/react";
 
 export function Loading({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
+  const [isSoundPlaying, setIsSoundPlaying] = useState(false);
+  const [soundBg, setSoundBg] = useState<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (isSoundPlaying) return;
+    if (soundBg) {
+      const playSequence = () => {
+        soundBg.volume = 0.5;
+        void soundBg.play();
+
+        soundBg.onended = playSequence;
+      };
+
+      playSequence();
+      setIsSoundPlaying(true);
+    }
+  }, [soundBg]);
+
+  const handlePlaySound = () => {
+    const audio = new Audio("/assets/sound.mp3");
+    setSoundBg(audio);
+  };
 
   return (
     <>
       {children}
 
       <AnimatePresence mode="wait">
-        {isLoading && (
-          <Motion.div key="loader" className="fixed inset-0 z-[9999] flex h-screen flex-col items-center justify-center gap-y-4 bg-[#010030]" exit={{ opacity: 0 }} transition={{ duration: 0.5 }} onClick={setIsLoading.bind(null, false)}>
+        {(!isSoundPlaying || isLoading) && (
+          <Motion.div key="loader" className="fixed inset-0 z-[9999] flex h-screen flex-col items-center justify-center gap-y-4 bg-[#010030]" exit={{ opacity: 0 }} transition={{ duration: 0.5 }} onClick={handlePlaySound}>
             {/* <Motion.svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`} role="img" initial={"hidden"} animate={"visible"}>
               <defs>
                 <radialGradient id="gradPurpleBlue" cx="50%" cy="40%" r="80%">

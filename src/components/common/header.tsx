@@ -52,7 +52,7 @@ export default function Header() {
     >
       <div className="flex items-center gap-3">
         <Image src={ShieldLogo} alt="Logo" className="w-12 sm:w-15" />
-        <span className="font-ethno text-md sm:text-base md:text-lg lg:text-xl text-[#E5E5E5] tracking-wide">MABIMRPL 2025</span>
+        <span className="font-ethno text-md sm:text-base md:text-lg lg:text-xl text-[#E5E5E5] tracking-wide">MABIM RPL 2025</span>
       </div>
       {/* Desktop Nav */}
       <nav className="hidden md:flex gap-6 sm:gap-2 md:gap-4 lg:gap-6 text-sm sm:text-xs md:text-xs lg:text-sm font-medium text-[#E5E5E5]">
