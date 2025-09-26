@@ -354,7 +354,7 @@ export const groupMabim: GroupMabim[] = [
       { id: "SGM-03", name: "Fursan Nahr" },
       { id: "SGM-04", name: "Kayla Putri Pandita" },
       { id: "SGM-05", name: "Lina Lisnawati" },
-      { id: "SGM-06", name: "M. Nawab Rasyid" },
+      { id: "SGM-06", name: "Muhammad Nawab Rasyid" },
       { id: "SGM-07", name: "Najla Azizah Gunawan" },
       { id: "SGM-08", name: "Nur Muhammad Iqbal Alfajri" },
       { id: "SGM-09", name: "Syarif Ihya Izzuddin" },

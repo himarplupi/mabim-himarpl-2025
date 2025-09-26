@@ -8,6 +8,8 @@ import { SponsorSection } from "@/components/common/sponsor-section";
 import { TimelineSection } from "@/components/common/timeline-section";
 import React from "react";
 
+export const dynamic = "force-static";
+
 export default function Home() {
   return (
     <main id="main" className="relative min-h-screen overflow-hidden">

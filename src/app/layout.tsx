@@ -2,11 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import localFont from "next/font/local";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { cn } from "@/lib/utils";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
