@@ -9,6 +9,7 @@ import SmileMascot2 from "@/assets/mascots/smile2.svg";
 import SmileMascot3 from "@/assets/mascots/smile3.svg";
 import Bg from "@/assets/bg.svg";
 import { motion as Motion } from "motion/react";
+import Link from "next/link";
 
 export function HeroSection() {
   const text = "2K25".split("");
@@ -35,8 +36,12 @@ export function HeroSection() {
         </p>
       </div>
       <div className="flex items-center gap-10 mt-[32px] z-[5] lg:gap-50">
-        <Button title="Twibbon" classN="md:w-[180px] md:h-[50px]" />
-        <Button title="Booklet" classN="md:w-[180px] md:h-[50px]" />
+        <Link href="https://drive.google.com/drive/folders/1NdPNBcVjaBGGTo-4Q-Zb_rQQdtUB_Ame" target="_blank">
+          <Button title="Twibbon" classN="md:w-[180px] md:h-[50px]" />
+        </Link>
+        <Link href="https://drive.google.com/drive/folders/1pgsNdC6gbFA9PIvhSUvj6O5ySA8SPiHk" target="_blank">
+          <Button title="Booklet" classN="md:w-[180px] md:h-[50px]" />
+        </Link>
       </div>
       {/* Mascot */}
       <div className="w-full flex justify-center relative">

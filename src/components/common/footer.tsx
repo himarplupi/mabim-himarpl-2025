@@ -6,11 +6,15 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   {
     name: "Booklet",
-    href: "https://s.id/BookletMABIMRPL2024",
+    href: "https://drive.google.com/drive/folders/1pgsNdC6gbFA9PIvhSUvj6O5ySA8SPiHk",
   },
   {
     name: "Twibbon",
-    href: "https://s.id/TwibbonMABIMRPL2024",
+    href: "https://drive.google.com/drive/folders/1NdPNBcVjaBGGTo-4Q-Zb_rQQdtUB_Ame",
+  },
+  {
+    name: "Logo",
+    href: "https://drive.google.com/drive/folders/16Mv3QXEpoU4SjtX4NXvj4UIITCP76JL9",
   },
   {
     name: "Lihat Kelompok",
@@ -26,11 +30,11 @@ const navLinks = [
   },
   {
     name: "Surat Keterangan Izin",
-    href: "https://s.id/surat-keterangan-izin-mabim-rpl-2024",
+    href: "http://bit.ly/3VBSvBK",
   },
   {
     name: "Form Pelaporan Panitia",
-    href: "https://s.id/form-pelaporan-panitia-mabim-rpl-2024",
+    href: "https://forms.gle/nxKrWG4eE7PfW9Rm9",
   },
   {
     name: "Instagram Mabim RPL",

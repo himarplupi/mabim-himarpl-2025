@@ -3,8 +3,14 @@ import Bg from "@/assets/bg.svg";
 import Mascot from "@/assets/mascots/smile.svg";
 import Marquee from "react-fast-marquee";
 import { cn } from "@/lib/utils";
-import Mokaku from "@/assets/Mokaku.png";
-
+import Dijait from "@/assets/sponsors/Dijait.png";
+import dapus from "@/assets/sponsors/LOGO DAPUS HD.jpeg";
+import fokus from "@/assets/sponsors/fokus.png";
+import hmve from "@/assets/sponsors/HMVE Logo.png";
+import pgsd from "@/assets/sponsors/pgsd.png";
+import tekkom from "@/assets/sponsors/tekkom.png";
+import pedia from "@/assets/sponsors/pedia.png";
+import perslima from "@/assets/sponsors/LOGO PERSLIMA.png";
 type SponsorMediaPartner = {
   name: string;
   logo: StaticImageData | null;
@@ -12,34 +18,46 @@ type SponsorMediaPartner = {
 
 const sponsorMediaPartners: SponsorMediaPartner[] = [
   {
-    name: "PT Dicoding Akademi Indonesia",
-    logo: Mokaku,
+    name: "Dijait",
+    logo: Dijait,
   },
   {
-    name: "PT Allo Bank Indonesia Tbk",
-    logo: Mokaku,
+    name: "Fokus",
+    logo: fokus,
   },
   {
-    name: "Ruru Snack",
-    logo: Mokaku,
+    name: "Dapus",
+    logo: dapus,
   },
   {
-    name: "PT Paragon Technology and Innovation",
-    logo: Mokaku,
+    name: "Perslima",
+    logo: perslima,
   },
   {
-    name: "Menyala by OCBC",
-    logo: Mokaku,
+    name: "hmve",
+    logo: hmve,
+  },
+  {
+    name: "pgsd",
+    logo: pgsd,
+  },
+  {
+    name: "pedia",
+    logo: pedia,
+  },
+  {
+    name: "tekkom",
+    logo: tekkom,
   },
 ];
 
-const firstRow = sponsorMediaPartners.slice(0, 3);
-const secondRow = sponsorMediaPartners.slice(3);
+const firstRow = sponsorMediaPartners.slice(0, 4);
+const secondRow = sponsorMediaPartners.slice(4);
 
 const SponsorMediaPartnerCard = ({ logo, size = "md" }: { logo: StaticImageData | null; size?: "md" | "lg" }) => {
   return (
-    <figure className={cn("relative flex aspect-video cursor-pointer items-center justify-center overflow-hidden rounded-xl object-center p-4", size === "lg" ? "h-36 w-full" : "h-24 w-48")}>
-      {logo && <Image src={logo} alt="Sponsor or Media Partner Logo" style={{ maxHeight: "100%", maxWidth: "100%" }} />}
+    <figure className={cn("relative flex  cursor-pointer items-center justify-center overflow-hidden  aspect-video rounded-xl object-center p-4", size === "lg" ? "h-40" : "h-24")}>
+      {logo && <Image src={logo} alt="Sponsor or Media Partner Logo" style={{ height: "100%", width: "auto" }} />}
     </figure>
   );
 };
