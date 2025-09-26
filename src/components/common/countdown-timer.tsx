@@ -17,7 +17,7 @@ export default function CountdownTimerTabs() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <section className="flex flex-col items-center w-full max-w-xl mx-auto py-6 px-2 md:px-0">
-      <div className="flex justify-start md:justify-center gap-0 md:gap-2 mb-6 w-full bg-[#1B0A3D]/60 rounded-lg border border-[#6C2EF2] px-2 py-2 overflow-x-scroll">
+      <div className="flex justify-start md:justify-center gap-0 md:gap-2 mb-6 w-full bg-[#1B0A3D]/60 rounded-lg border border-[#6C2EF2] px-2 py-2 ">
         {events.map((event, idx) => (
           <button
             key={event.label}
