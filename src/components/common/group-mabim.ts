@@ -150,7 +150,7 @@ export const groupMabim: GroupMabim[] = [
     name: "Delta",
     mentor: {
       name: "Naufal Zahran",
-      phone: "+62",
+      phone: "+6289524032593",
       image: imgDelta,
       metadata: {
         skill: "Goldlane idaman",

@@ -14,32 +14,32 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 const faqs = [
   {
     id: "item-1",
-    question: "Berapa Lama Mabim Dilaksanakan?",
-    answer: "Mabim dilaksanakan selama 4 hari dalam kurun waktu 1 bulan, dimana setiap pelaksanaannya diadakan pada hari Sabtu, kecuali day 3 yang dilaksanakan pada hari Minggu.",
+    question: "Berapa Lama MABIM Dilaksanakan?",
+    answer: "MABIM dilaksanakan selama 4 hari dalam kurun waktu 1 bulan, dimana setiap pelaksanaannya diadakan pada hari Minggu, kecuali day 2 yang dilaksanakan pada hari Sabtu.",
   },
   {
     id: "item-2",
-    question: "Apa Kepanjangan dari MABIMRPL?",
+    question: "Apa Kepanjangan dari MABIM RPL?",
     answer: "Kepanjangan dari Mabim adalah Masa Bimbingan. Jadi, Mabim RPL artinya Masa Bimbingan yang dilaksanakan untuk mahasiswa baru dengan Prodi RPL atau Rekayasa Perangkat Lunak",
   },
   {
     id: "item-3",
-    question: "Apa manfaat dari MABIMRPL?",
+    question: "Apa manfaat dari MABIM RPL?",
     answer: "Mabim sangat berguna untuk memperdalam pemahaman mahasiswa baru terkait prodi yang tengah mereka tempuh, jadi jangan sampai ga ikut ya!",
   },
   {
     id: "item-4",
-    question: "Apakah MABIMRPL Wajib?",
-    answer: "Mabim ini diwajibkan untuk seluruh mahasiswa baru di Universitas Pendidikan Indonesia, jadi siap-siap ya!!",
+    question: "Apakah MABIM RPL Wajib?",
+    answer: "Mabim ini diwajibkan untuk seluruh mahasiswa baru Rekayasa Perangkat Lunak di Universitas Pendidikan Indonesia, jadi siap-siap ya!!",
   },
   {
     id: "item-5",
-    question: "Apa yang Perlu Disiapkan untuk MABIMRPL?",
+    question: "Apa yang Perlu Disiapkan untuk MABIM RPL?",
     answer: "Untuk ikut Mabim itu sebenernya cuma perlu satu hal, yaitu Niat. Sisanya tinggal ikutin instruksi dari Mentornya aja deh :D",
   },
   {
     id: "item-6",
-    question: "MABIMRPL itu Santai apa Serius Banget?",
+    question: "MABIM RPL itu Santai apa Serius Banget?",
     answer: "Mabim ini ada waktunya santai, tapi juga ada waktu seriusnya. Jadi ga usah khawatir, ga akan seserius itu kok :)",
   },
 ];

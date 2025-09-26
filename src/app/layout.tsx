@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${geistSans.variable} ${montserrat.variable} ${fontE.variable} ${fontI.variable} ${fontJ.variable}`}>
-      <body>
+      <body className="bg-[#072359]">
         <Header />
         <Loading>
           <ReactLenis>{children}</ReactLenis>
