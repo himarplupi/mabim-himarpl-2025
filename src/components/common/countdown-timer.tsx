@@ -18,23 +18,23 @@ export default function CountdownTimerTabs() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <section className="flex flex-col items-center w-full max-w-xl mx-auto py-6 px-2 md:px-0">
-      <div className="flex justify-start md:justify-center gap-0 md:gap-2 mb-6 w-full bg-[#1B0A3D]/60 rounded-lg border border-[#6C2EF2] px-2 py-2 overflow-x-auto scrollbar-hide">
+      <div className="flex justify-start md:justify-center gap-2 md:gap-3 mb-6 w-full bg-[#1B0A3D]/60 rounded-lg border border-[#6C2EF2] px-2 py-2 overflow-x-scroll scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {events.map((event, idx) => (
           <button
             key={event.label}
             onClick={() => setActiveTab(idx)}
-            className={`relative min-w-[120px] md:min-w-[80px] flex items-center justify-center px-6 py-2 font-bold text-base md:text-lg rounded-md transition-all duration-300 border-none outline-none focus:outline-none ${activeTab === idx ? "bg-[#6C2EF2]/80 text-white" : "bg-transparent text-[#E5E5E5]"}`}
+            className={`relative min-w-[80px] md:min-w-[100px] flex items-center justify-center px-3 md:px-4 py-2 font-bold text-sm md:text-base rounded-md transition-all duration-300 border-none outline-none focus:outline-none ${activeTab === idx ? "bg-[#6C2EF2]/80 text-white" : "bg-transparent text-[#E5E5E5]"}`}
           >
             {activeTab === idx && (
               <motion.span
-                className="absolute left-2 top-1/2 -translate-y-1/2"
+                className="absolute left-1.5 md:left-2 top-1/2 -translate-y-1/2"
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
               >
-                <Image src={TimerDot} alt="active" width={18} height={18} />
+                <Image src={TimerDot} alt="active" width={14} height={14} className="md:w-[16px] md:h-[16px]" />
               </motion.span>
             )}
-            <span className="ml-6">{event.short}</span>
+            <span className="ml-4 md:ml-5">{event.short}</span>
           </button>
         ))}
       </div>
