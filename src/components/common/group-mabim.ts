@@ -139,7 +139,7 @@ export const groupMabim: GroupMabim[] = [
       { id: "OMG-05", name: "Janitra Alvito Zahir" },
       { id: "OMG-06", name: "Mohammad Ferdiansyah" },
       { id: "OMG-07", name: "Moreno Adjie Pratama" },
-      { id: "OMG-08", name: "Muhammad Arfa Ghaisaan" },
+      { id: "OMG-08", name: "Muhammad Arfa Ghaisan" },
       { id: "OMG-09", name: "Najwa Aidatul Karomah" },
       { id: "OMG-10", name: "Tiara Syahla Meitira" },
     ],
@@ -150,7 +150,7 @@ export const groupMabim: GroupMabim[] = [
     name: "Delta",
     mentor: {
       name: "Naufal Zahran",
-      phone: "+62",
+      phone: "+6289524032593",
       image: imgDelta,
       metadata: {
         skill: "Goldlane idaman",
@@ -279,6 +279,7 @@ export const groupMabim: GroupMabim[] = [
       { id: "ORN-07", name: "Shafa Stevia Putri" },
       { id: "ORN-08", name: "Syauqi Mustafidl Amna" },
       { id: "ORN-09", name: "Tristan Maulana Alfath" },
+      { id: "ORN-10", name: "Rifqi Alfyanto Khaiirunnas" },
     ],
   },
   {
@@ -354,7 +355,7 @@ export const groupMabim: GroupMabim[] = [
       { id: "SGM-03", name: "Fursan Nahr" },
       { id: "SGM-04", name: "Kayla Putri Pandita" },
       { id: "SGM-05", name: "Lina Lisnawati" },
-      { id: "SGM-06", name: "M. Nawab Rasyid" },
+      { id: "SGM-06", name: "Muhammad Nawab Rasyid" },
       { id: "SGM-07", name: "Najla Azizah Gunawan" },
       { id: "SGM-08", name: "Nur Muhammad Iqbal Alfajri" },
       { id: "SGM-09", name: "Syarif Ihya Izzuddin" },

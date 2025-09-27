@@ -2,11 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import localFont from "next/font/local";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { cn } from "@/lib/utils";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${geistSans.variable} ${montserrat.variable} ${fontE.variable} ${fontI.variable} ${fontJ.variable}`}>
-      <body>
+      <body className="bg-[#072359]">
         <Header />
         <Loading>
           <ReactLenis>{children}</ReactLenis>
