@@ -52,6 +52,16 @@ html {
   display: none !important;
 }
 
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3243a6;
+  border-radius: 8px;
+}
+
 @keyframes accordion-down {
   from {
     height: 0;
