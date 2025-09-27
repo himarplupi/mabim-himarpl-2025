@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
+@plugin "tailwind-scrollbar-hide";
 
 @theme inline {
   --font-ethno: var(--font-ethno);
