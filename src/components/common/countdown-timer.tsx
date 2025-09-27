@@ -18,14 +18,12 @@ export default function CountdownTimerTabs() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <section className="flex flex-col items-center w-full max-w-xl mx-auto py-6 px-2 md:px-0">
-      <div className="flex justify-start md:justify-center gap-0 md:gap-2 mb-6 w-full bg-[#1B0A3D]/60 rounded-lg border border-[#6C2EF2] px-2 py-2 overflow-x-auto scrollbar-hide">
-
+      <div className="flex justify-evenly gap-2 md:gap-3 mb-6 w-full bg-[#1B0A3D]/60 rounded-lg border border-[#6C2EF2] px-2 py-2 overflow-x-scroll scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {events.map((event, idx) => (
           <button
             key={event.label}
             onClick={() => setActiveTab(idx)}
-
-            className={`relative min-w-[120px] md:min-w-[80px] flex items-center justify-center px-6 py-2 font-bold text-base md:text-lg rounded-md transition-all duration-300 border-none outline-none focus:outline-none ${activeTab === idx ? "bg-[#6C2EF2]/80 text-white" : "bg-transparent text-[#E5E5E5]"}`}
+            className={`relative min-w-[80px] md:min-w-[100px] flex items-center justify-center px-3 md:px-4 py-2 font-bold md:text-base text-sm rounded-md transition-all duration-300 border-none outline-none focus:outline-none ${activeTab === idx ? "bg-[#6C2EF2]/80 text-white" : "bg-transparent text-[#E5E5E5]"}`}
           >
             {activeTab === idx && (
               <motion.span
