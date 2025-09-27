@@ -15,6 +15,7 @@ export function HeroSection() {
   const text = "2K25".split("");
   return (
     <section className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_0.43%,#010030_7%,#7226FF_55%,#3243A6_100%)] text-center flex min-h-[1000px] h-screen w-full flex-col items-center justify-center gap-y-6 relative overflow-hidden px-4">
+
       {/* Mobile Headline */}
       <div className="max-w-[343px] sm:hidden z-[5] mt-20">
         <h1 className="font-ethno text-white text-[32px] [text-shadow:0_0_8px_#8166E3]">EXPLORING MABIM WITH</h1>
