@@ -279,7 +279,7 @@ export const groupMabim: GroupMabim[] = [
       { id: "ORN-07", name: "Shafa Stevia Putri" },
       { id: "ORN-08", name: "Syauqi Mustafidl Amna" },
       { id: "ORN-09", name: "Tristan Maulana Alfath" },
-      { id: "ORN-10", name: "Rifqi Alfyanto Khaiirunnas" },
+      { id: "ORN-10", name: "Rifqi Alfyanto Khairunnas" },
     ],
   },
   {
