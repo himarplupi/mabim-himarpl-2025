@@ -57,7 +57,7 @@ export function Footer() {
     <footer className=" relative z-10 bg-[radial-gradient(101.34%_99.57%_at_50.02%_0.43%,#010030_7%,#7226FF_55%,#7226FF_100%)]">
       <div className="p-8 flex flex-col gap-4  md:flex-row md:items-center">
         <p className="font-montserrat text-lg text-neutral-200 md:text-xl">
-          Tujuan dari Mabim RPL 2024 adalah untuk membantu mahasiswa baru dalam mengorientasikan diri mereka terhadap lingkungan akademik, mata kuliah dan kegiatan yang berkaitan dengan Rekayasa Perangkat Lunak UPI Kampus Cibiru.
+          Tujuan dari Mabim RPL 2025 adalah untuk membantu mahasiswa baru dalam mengorientasikan diri mereka terhadap lingkungan akademik, mata kuliah dan kegiatan yang berkaitan dengan Rekayasa Perangkat Lunak UPI Kampus Cibiru.
         </p>
 
         <ul className="ml-4 flex min-w-72 flex-col gap-y-2 border-l border-[#AC8FDB] py-3 pl-6">
