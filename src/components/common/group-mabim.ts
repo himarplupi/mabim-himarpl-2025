@@ -306,6 +306,7 @@ export const groupMabim: GroupMabim[] = [
       { id: "QTM-07", name: "Reza Febryan" },
       { id: "QTM-08", name: "Salwa Nur Amelia Suhendar" },
       { id: "QTM-09", name: "Utami Trisna Kinanti" },
+      { id: "QTM-10", name: "Radian Adyatma Vardaya" },
     ],
   },
   {
