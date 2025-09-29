@@ -11,7 +11,7 @@ export function FaqSection() {
         <h3 className="font-ethno text-white text-[32px] md:text-[42px] z-[6] mb-10 text-primary">faq</h3>
       </BlurFade>
 
-      <BlurFade className="w-full" inView delay={0.25 * 3}>
+      <BlurFade className="w-full z-[6]" inView delay={0.25 * 3}>
         <FAQAccordions />
       </BlurFade>
 

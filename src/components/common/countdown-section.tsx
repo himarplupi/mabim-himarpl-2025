@@ -18,7 +18,7 @@ export function CountdownSection() {
       </BlurFade>
       <Image src={Bg} alt="bg pattern" className="absolute left-20 top-5 opacity-[8%]  inset-0  w-full sm:hidden h-full object-cover z-[1] scale-[175%] bg-center" />
 
-      <BlurFade className="w-full" inView delay={0.25 * 3}>
+      <BlurFade className="w-full z-10" inView delay={0.25 * 3}>
         <div className="relative z-[10] w-full flex justify-center mt-4 md:mt-8">
           <CountdownTimerTabs />
         </div>
