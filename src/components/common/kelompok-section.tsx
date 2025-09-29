@@ -99,7 +99,7 @@ export function KelompokSection() {
       </div>
       <Dialog open={isNotFound} onOpenChange={setIsNotFound}>
         <DialogContent tabIndex={-1} className="">
-          <DialogTitle className="font-ethno text-center py-6 bg-[#680000]/40 w-full border border-[#FF0000] relative shadow-[inset_0_0_37px_0_#FF0000] backdrop-blur-[56px] mb-9">
+          <DialogTitle className="font-ethno text-center py-6 bg-[#680000]/40 w-full border border-[#FF0000] relative shadow-[inset_0_0_37px_0_#FF0000] backdrop-blur-[56px] ">
             <span className="bg-radial-[at_50%_50%] from-white to-[#B90808] bg-clip-text text-transparent text-2xl md:text-[55px]">Error</span>
 
             <Motion.div
@@ -139,9 +139,7 @@ export function KelompokSection() {
             ></Motion.div>
           </DialogTitle>
 
-          <DialogDescription hidden>im mysterious</DialogDescription>
-
-          <div className="text-center p-6 flex flex-col justify-between bg-[#680000]/40 w-full border border-[#FF0000]  shadow-[inset_0_0_37px_0_#FF0000] backdrop-blur-[56px] text-white md:text-3xl text-base uppercase gap-8">
+          <div className="my-9 text-center p-6 flex flex-col justify-between bg-[#680000]/40 w-full border border-[#FF0000]  shadow-[inset_0_0_37px_0_#FF0000] backdrop-blur-[56px] text-white md:text-3xl text-base uppercase gap-8">
             <span className="font-montserrat  relative">
               Nama yang kamu masukkan salah! harap masukkan nama yang benar dengan nama lengkap.
               <span className="absolute inset-0 text-red-500 blur-sm  mix-blend-multiply">Nama yang kamu masukkan salah! harap masukkan nama yang benar dengan nama lengkap.</span>
@@ -151,6 +149,11 @@ export function KelompokSection() {
               <GlitchText text="- Anonymous -" className="font-jumbo" />
             </span>
           </div>
+
+          <DialogDescription className="font-mono text-center py-6 bg-[#680000]/40 w-full border border-[#FF0000] relative shadow-[inset_0_0_37px_0_#FF0000] backdrop-blur-[56px]" hidden>
+            im mysterious
+          </DialogDescription>
+          <span className="text-white md:text-base text-sm [text-shadow:0_0_8px_#680000]">Tekan di bagian yang kosong untuk menutup</span>
         </DialogContent>
       </Dialog>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
