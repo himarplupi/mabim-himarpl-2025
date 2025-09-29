@@ -16,6 +16,7 @@ import { motion as Motion } from "motion/react";
 import { SiWhatsapp } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { GlitchText } from "../ui/glitch-effects";
+import { BlurFade } from "../ui/blur-fade";
 
 export function KelompokSection() {
   const lenis = useLenis();
@@ -55,38 +56,40 @@ export function KelompokSection() {
       className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)]
  text-center flex min-h-[812px] h-screen w-full flex-col items-center pt-[140px] relative overflow-clip"
     >
-      <div className="relative flex w-full items-center flex-col gap-6 z-[6] md:mt-20">
-        <Image src={card} alt="card" className="absolute -bottom-10 w-[343px] z-[5] md:hidden " />
-        <Image src={card2} alt="card" className="absolute -bottom-[60px] w-[800px] z-[5] md:block hidden" />
+      <BlurFade delay={0.25 * 2} inView className="w-full">
+        <div className="relative flex w-full items-center flex-col gap-6 z-[6] md:mt-20">
+          <Image src={card} alt="card" className="absolute -bottom-10 w-[343px] z-[5] md:hidden " />
+          <Image src={card2} alt="card" className="absolute -bottom-[60px] w-[800px] z-[5] md:block hidden" />
 
-        <div className="w-[311px] md:w-[679px] z-[6]">
-          <span className=" bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[34px]/[42.3px] md:text-[40px]/[48px]">Temukan Kelompok Mabim-mu</span>
-          <p className="z-[6] font-montserrat font-bold text-white md:text-xl md:mt-4">Cari dengan menuliskan nama lengkap kamu!</p>
-        </div>
+          <div className="w-[311px] md:w-[679px] z-[6]">
+            <span className=" bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[34px]/[42.3px] md:text-[40px]/[48px]">Temukan Kelompok Mabim-mu</span>
+            <p className="z-[6] font-montserrat font-bold text-white md:text-xl md:mt-4">Cari dengan menuliskan nama lengkap kamu!</p>
+          </div>
 
-        <div
-          className="z-[6] bg-white/20 gap-[-8px] w-[311px] md:w-[667px] md:h-[80px] py-3 px-4 border-[#a2a2a2] border-[0.3px] flex items-center 
+          <div
+            className="z-[6] bg-white/20 gap-[-8px] w-[311px] md:w-[667px] md:h-[80px] py-3 px-4 border-[#a2a2a2] border-[0.3px] flex items-center 
 "
-        >
-          <input
-            type="text"
-            placeholder="Ketik disini..."
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                if (name.length > 0) {
-                  handleSearch();
+          >
+            <input
+              type="text"
+              placeholder="Ketik disini..."
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  if (name.length > 0) {
+                    handleSearch();
+                  }
                 }
-              }
-            }}
-            className="w-full outline-0 font-montserrat font-bold text-[12px] placeholder:text-[#DAC2FF] text-white md:text-xl"
-          />
-        </div>
+              }}
+              className="w-full outline-0 font-montserrat font-bold text-[12px] placeholder:text-[#DAC2FF] text-white md:text-xl"
+            />
+          </div>
 
-        <Button title="Launch" disabled={name.length === 0} onClick={handleSearch} classN="md:w-[667px] md:h-[80px]" />
-      </div>
+          <Button title="Launch" disabled={name.length === 0} onClick={handleSearch} classN="md:w-[667px] md:h-[80px]" />
+        </div>
+      </BlurFade>
       <Image src={Bg} alt="bg pattern" className="absolute sm:hidden left-20 top-5 opacity-[8%]  inset-0  w-full h-full object-cover z-[1] scale-[175%] bg-center" />{" "}
       <div className="absolute -top-28 sm:hidden  bg-gradient-to-b from-[#010030] to-[#030096] w-full h-[234px] rounded-b-full blur-2xl"></div>
       <div className="absolute bottom-0 w-full h-[200px]">
