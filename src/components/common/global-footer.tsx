@@ -43,6 +43,11 @@ export function GlobalFooter() {
               Chris
             </Link>
             {", "}
+            <Link href="https://www.instagram.com/ikshanmuhamad_/" target="_blank" className="font-mono font-semibold hover:underline text-neutral-100">
+              Ikhsan
+            </Link>{" "}
+            <span className="font-mono font-semibold hover:underline text-neutral-100">(As an UI/UX Designer)</span>
+            {", "}
             <Link href="https://github.com/Zreaei" target="_blank" className="font-mono font-semibold hover:underline text-neutral-100">
               Zamzami
             </Link>

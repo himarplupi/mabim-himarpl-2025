@@ -4,6 +4,7 @@ import Bg from "@/assets/bg.svg";
 import OrnamentPattern from "@/assets/ornaments/Pattern.svg";
 import { useScroll, motion as Motion } from "motion/react";
 import { useRef } from "react";
+import { BlurFade } from "../ui/blur-fade";
 const timeline = [
   {
     date: "2025-10-04",
@@ -39,7 +40,9 @@ export function TimelineSection() {
       className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)] sm:bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)]
  text-center flex  min-h-[812px] w-full flex-col items-center pt-[104px] relative overflow-clip h-screen"
     >
-      <h3 className="font-ethno text-white text-[32px] z-[6]">TIMELINE</h3>
+      <BlurFade inView delay={0.25 * 2} className="z-[6]">
+        <h3 className="font-ethno text-white text-[32px] z-[6]">TIMELINE</h3>
+      </BlurFade>
       <ul className="z-[7] mt-10">
         {timeline.map((item, index) => {
           const nextDate = timeline[index + 1]?.date;
