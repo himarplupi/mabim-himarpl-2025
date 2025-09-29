@@ -56,7 +56,7 @@ export function KelompokSection() {
       className="bg-[radial-gradient(101.34%_99.57%_at_50.02%_100%,#010030_7%,#7226FF_55%,#3243A6_100%)]
  text-center flex min-h-[812px] h-screen w-full flex-col items-center pt-[140px] relative overflow-clip"
     >
-      <BlurFade delay={0.25 * 2} inView className="w-full">
+      <BlurFade delay={0.25 * 2} inView className="w-full z-[6]">
         <div className="relative flex w-full items-center flex-col gap-6 z-[6] md:mt-20">
           <Image src={card} alt="card" className="absolute -bottom-10 w-[343px] z-[5] md:hidden " />
           <Image src={card2} alt="card" className="absolute -bottom-[60px] w-[800px] z-[5] md:block hidden" />
