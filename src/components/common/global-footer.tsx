@@ -35,20 +35,20 @@ export function GlobalFooter() {
         <div className="mt-6 space-y-1 py-6">
           <p className="text-center font-montserrat text-sm leading-5 text-white">
             Passionally crafted by{" "}
-            <Link href="https://github.com/BintangKurniawan" target="_blank" className="font-mono font-semibold hover:underline text-neutral-100">
+            <Link href="https://github.com/BintangKurniawan" target="_blank" className="font-mono font-semibold underline text-neutral-100">
               Bintang
             </Link>
             {", "}
-            <Link href="https://github.com/gchristiansun" target="_blank" className="font-mono font-semibold hover:underline text-neutral-100">
+            <Link href="https://github.com/gchristiansun" target="_blank" className="font-mono font-semibold underline text-neutral-100">
               Chris
             </Link>
             {", "}
-            <Link href="https://www.instagram.com/ikshanmuhamad_/" target="_blank" className="font-mono font-semibold hover:underline text-neutral-100">
-              Ikhsan
+            <Link href="https://www.instagram.com/ikshanmuhamad_/" target="_blank" className="font-mono font-semibold underline text-neutral-100">
+              Ikshan
             </Link>{" "}
-            <span className="font-mono font-semibold hover:underline text-neutral-100">(As an UI/UX Designer)</span>
+            <span className="font-mono font-semibold text-neutral-100">(As an UI/UX Designer)</span>
             {", "}
-            <Link href="https://github.com/Zreaei" target="_blank" className="font-mono font-semibold hover:underline text-neutral-100">
+            <Link href="https://github.com/Zreaei" target="_blank" className="font-mono font-semibold underline text-neutral-100">
               Zamzami
             </Link>
             . Supported by Department{" "}
