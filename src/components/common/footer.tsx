@@ -10,7 +10,7 @@ const navLinks = [
   },
   {
     name: "Twibbon",
-    href: "https://drive.google.com/drive/folders/1NdPNBcVjaBGGTo-4Q-Zb_rQQdtUB_Ame",
+    href: "https://drive.google.com/file/d/1NfB0BsIfFZu-ffspQaTD-6kLTiscXYMZ/view",
   },
   {
     name: "Logo",
