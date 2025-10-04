@@ -4,13 +4,15 @@ import Mascot from "@/assets/mascots/smile.svg";
 import Marquee from "react-fast-marquee";
 import { cn } from "@/lib/utils";
 import Dijait from "@/assets/sponsors/Dijait.png";
-import dapus from "@/assets/sponsors/LOGO DAPUS HD.jpeg";
+import dapus from "@/assets/sponsors/DAPUS.jpeg";
 import fokus from "@/assets/sponsors/fokus.png";
-import hmve from "@/assets/sponsors/HMVE Logo.png";
+import hmve from "@/assets/sponsors/HMVE.png";
 import pgsd from "@/assets/sponsors/pgsd.png";
 import tekkom from "@/assets/sponsors/tekkom.png";
 import pedia from "@/assets/sponsors/pedia.png";
-import perslima from "@/assets/sponsors/LOGO PERSLIMA.png";
+import perslima from "@/assets/sponsors/PERSLIMA.png";
+import kanght from "@/assets/sponsors/kanght.png";
+import rekapstore from "@/assets/sponsors/rekapstore.png";
 import { BlurFade } from "../ui/blur-fade";
 type SponsorMediaPartner = {
   name: string;
@@ -21,6 +23,14 @@ const sponsorMediaPartners: SponsorMediaPartner[] = [
   {
     name: "Dijait",
     logo: Dijait,
+  },
+  {
+    name: "KANGHT",
+    logo: kanght,
+  },
+  {
+    name: "Rekap Store",
+    logo: rekapstore,
   },
   {
     name: "Fokus",
@@ -52,8 +62,8 @@ const sponsorMediaPartners: SponsorMediaPartner[] = [
   },
 ];
 
-const firstRow = sponsorMediaPartners.slice(0, 4);
-const secondRow = sponsorMediaPartners.slice(4);
+const firstRow = sponsorMediaPartners.slice(0, 3);
+const secondRow = sponsorMediaPartners.slice(3);
 
 const SponsorMediaPartnerCard = ({ logo, size = "md" }: { logo: StaticImageData | null; size?: "md" | "lg" }) => {
   return (

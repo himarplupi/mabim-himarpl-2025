@@ -42,7 +42,7 @@ export function HeroSection() {
       </div>
       <BlurFade delay={0.25 * 3} inView className="z-[5]">
         <div className="flex items-center gap-10 mt-[32px] z-[5] lg:gap-50">
-          <Link href="https://drive.google.com/drive/folders/1NdPNBcVjaBGGTo-4Q-Zb_rQQdtUB_Ame" target="_blank">
+          <Link href="https://drive.google.com/file/d/1NfB0BsIfFZu-ffspQaTD-6kLTiscXYMZ/view" target="_blank">
             <Button title="Twibbon" classN="md:w-[180px] md:h-[50px]" />
           </Link>
           <Link href="https://drive.google.com/drive/folders/1pgsNdC6gbFA9PIvhSUvj6O5ySA8SPiHk" target="_blank">
