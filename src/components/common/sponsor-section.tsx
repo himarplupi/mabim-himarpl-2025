@@ -13,6 +13,8 @@ import pedia from "@/assets/sponsors/pedia.png";
 import perslima from "@/assets/sponsors/PERSLIMA.png";
 import kanght from "@/assets/sponsors/kanght.png";
 import rekapstore from "@/assets/sponsors/rekapstore.png";
+import dicoding from "@/assets/sponsors/dicoding.png";
+import oppa from "@/assets/sponsors/oppa.png";
 import { BlurFade } from "../ui/blur-fade";
 type SponsorMediaPartner = {
   name: string;
@@ -20,6 +22,14 @@ type SponsorMediaPartner = {
 };
 
 const sponsorMediaPartners: SponsorMediaPartner[] = [
+  {
+    name: "Dicoding",
+    logo: dicoding,
+  },
+  {
+    name: "Oppa",
+    logo: oppa,
+  },
   {
     name: "Dijait",
     logo: Dijait,
@@ -62,8 +72,8 @@ const sponsorMediaPartners: SponsorMediaPartner[] = [
   },
 ];
 
-const firstRow = sponsorMediaPartners.slice(0, 3);
-const secondRow = sponsorMediaPartners.slice(3);
+const firstRow = sponsorMediaPartners.slice(0, 5);
+const secondRow = sponsorMediaPartners.slice(5);
 
 const SponsorMediaPartnerCard = ({ logo, size = "md" }: { logo: StaticImageData | null; size?: "md" | "lg" }) => {
   return (
