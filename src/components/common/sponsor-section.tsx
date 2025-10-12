@@ -15,6 +15,7 @@ import kanght from "@/assets/sponsors/kanght.png";
 import rekapstore from "@/assets/sponsors/rekapstore.png";
 import dicoding from "@/assets/sponsors/dicoding.png";
 import oppa from "@/assets/sponsors/oppa.png";
+import dpm from "@/assets/sponsors/dpm.svg";
 import { BlurFade } from "../ui/blur-fade";
 type SponsorMediaPartner = {
   name: string;
@@ -42,26 +43,16 @@ const sponsorMediaPartners: SponsorMediaPartner[] = [
     name: "Rekap Store",
     logo: rekapstore,
   },
+
   {
-    name: "Fokus",
-    logo: fokus,
-  },
-  {
-    name: "Dapus",
-    logo: dapus,
-  },
-  {
-    name: "Perslima",
-    logo: perslima,
+    name: "dpm",
+    logo: dpm,
   },
   {
     name: "hmve",
     logo: hmve,
   },
-  {
-    name: "pgsd",
-    logo: pgsd,
-  },
+
   {
     name: "pedia",
     logo: pedia,
@@ -69,6 +60,22 @@ const sponsorMediaPartners: SponsorMediaPartner[] = [
   {
     name: "tekkom",
     logo: tekkom,
+  },
+  {
+    name: "pgsd",
+    logo: pgsd,
+  },
+  {
+    name: "Perslima",
+    logo: perslima,
+  },
+  {
+    name: "Dapus",
+    logo: dapus,
+  },
+  {
+    name: "Fokus",
+    logo: fokus,
   },
 ];
 
