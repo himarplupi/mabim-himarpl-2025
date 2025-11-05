@@ -6,15 +6,17 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { useState, useRef, useEffect } from "react";
 import HamburgerIcon from "@/assets/ornaments/Hamburger.svg";
 import Link from "next/link";
-const isExternalLink = (href: string) => href.includes("http");
-import { motion as Motion, useInView } from "motion/react";
+import { motion as Motion } from "motion/react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5, margin: "100px" });
-  const [isClient, setIsClient] = useState(false);
+  // const isInView = useInView(ref, { once: true, amount: 0.5, margin: "100px" });
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScroll, setLastScroll] = useState(0);
+
+  // const [isClient, setIsClient] = useState(false);
   const pathname = usePathname();
   const navLinks = [
     { name: "Home", href: "#main" },
@@ -22,33 +24,53 @@ export default function Header() {
     { name: "Countdown", href: "#countdown" },
     { name: "Timeline", href: "#timeline" },
     { name: "FAQ", href: "#faq" },
+    { name: "Documentation", href: "/documentation" },
   ];
 
   const lenis = useLenis();
 
   const handleLinkClick = (href: string, e: React.MouseEvent) => {
-    if (!isExternalLink(href)) {
+    if (href.startsWith("#")) {
       e.preventDefault();
+
       lenis?.scrollTo(href, { offset: -64 });
+      return;
+    }
+
+    if (href.startsWith("http")) {
+      return;
     }
   };
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    if (!lenis) return;
+
+    function onScroll({ scroll }: { scroll: number }) {
+      if (scroll > lastScroll && scroll > 100) {
+        setShowHeader(false);
+      } else if (scroll < lastScroll - 10) {
+        setShowHeader(true);
+      }
+      setLastScroll(scroll);
+    }
+
+    lenis.on("scroll", onScroll);
+
+    return () => lenis.off("scroll", onScroll);
+  }, [lenis, lastScroll]);
 
   return (
     <Motion.header
       ref={ref}
       initial={{ y: -100 }}
-      animate={{ y: isClient && pathname === "/" && isInView ? 0 : -100 }}
+      animate={{ y: showHeader ? 0 : -100 }}
       transition={{
         type: "spring",
         stiffness: 100,
         damping: 10,
         mass: 1,
       }}
-      className={`fixed top-5 left-1/2 transform -translate-x-1/2 w-[95%] z-50 flex items-center justify-between md:pl-6 md:pr-10 px-5 md:py-2 py-2 shadow-lg bg-[#ffffff]/20 border border-[#6C2EF2] backdrop-blur-sm`}
+      className={`fixed top-5 left-1/2 transform -translate-x-1/2 w-[95%] z-50 flex items-center justify-between md:pl-6 md:pr-10 px-5 md:py-2 py-2 shadow-lg bg-[#ffffff]/20 border border-[#6C2EF2] backdrop-blur-sm ${pathname === "/" ? "" : "hidden"}`}
     >
       <div className="flex items-center gap-3">
         <Image src={ShieldLogo} alt="Logo" className="w-12 sm:w-15" />
