@@ -25,6 +25,7 @@ export default function Header() {
     { name: "Timeline", href: "#timeline" },
     { name: "FAQ", href: "#faq" },
     { name: "Documentation", href: "/documentation" },
+    { name: "Essay", href: "/essay" },
   ];
 
   const lenis = useLenis();
@@ -58,6 +59,7 @@ export default function Header() {
 
     return () => lenis.off("scroll", onScroll);
   }, [lenis, lastScroll]);
+  const show = pathname === "/" || pathname === "/essay";
 
   return (
     <Motion.header
@@ -70,7 +72,7 @@ export default function Header() {
         damping: 10,
         mass: 1,
       }}
-      className={`fixed top-5 left-1/2 transform -translate-x-1/2 w-[95%] z-50 flex items-center justify-between md:pl-6 md:pr-10 px-5 md:py-2 py-2 shadow-lg bg-[#ffffff]/20 border border-[#6C2EF2] backdrop-blur-sm ${pathname === "/" ? "" : "hidden"}`}
+      className={`fixed top-5 left-1/2 transform -translate-x-1/2 w-[95%] z-50 flex items-center justify-between md:pl-6 md:pr-10 px-5 md:py-2 py-2 shadow-lg bg-[#ffffff]/20 border border-[#6C2EF2] backdrop-blur-sm ${show ? "" : "hidden"}`}
     >
       <div className="flex items-center gap-3">
         <Image src={ShieldLogo} alt="Logo" className="w-12 sm:w-15" />
