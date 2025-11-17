@@ -17,7 +17,7 @@ import dicoding from "@/assets/sponsors/dicoding.png";
 import oppa from "@/assets/sponsors/oppa.png";
 import dpm from "@/assets/sponsors/dpm.svg";
 import omg from "@/assets/sponsors/OMG.png";
-import ss from "@/assets/sponsors/SS.png";
+import ss from "@/assets/sponsors/ss.png";
 import { BlurFade } from "../ui/blur-fade";
 type SponsorMediaPartner = {
   name: string;
