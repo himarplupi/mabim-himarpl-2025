@@ -16,6 +16,8 @@ import rekapstore from "@/assets/sponsors/rekapstore.png";
 import dicoding from "@/assets/sponsors/dicoding.png";
 import oppa from "@/assets/sponsors/oppa.png";
 import dpm from "@/assets/sponsors/dpm.svg";
+import omg from "@/assets/sponsors/OMG.png";
+import ss from "@/assets/sponsors/SS.png";
 import { BlurFade } from "../ui/blur-fade";
 type SponsorMediaPartner = {
   name: string;
@@ -42,6 +44,14 @@ const sponsorMediaPartners: SponsorMediaPartner[] = [
   {
     name: "Rekap Store",
     logo: rekapstore,
+  },
+  {
+    name: "SS",
+    logo: ss,
+  },
+  {
+    name: "OMG",
+    logo: omg,
   },
 
   {
@@ -79,8 +89,8 @@ const sponsorMediaPartners: SponsorMediaPartner[] = [
   },
 ];
 
-const firstRow = sponsorMediaPartners.slice(0, 5);
-const secondRow = sponsorMediaPartners.slice(5);
+const firstRow = sponsorMediaPartners.slice(0, 7);
+const secondRow = sponsorMediaPartners.slice(7);
 
 const SponsorMediaPartnerCard = ({ logo, size = "md" }: { logo: StaticImageData | null; size?: "md" | "lg" }) => {
   return (
