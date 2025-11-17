@@ -5,6 +5,7 @@ import omega from "@/assets/essai/omega.png";
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const essay = [
   {
@@ -28,25 +29,31 @@ export default function Essai() {
   return (
     <div className="w-full min-h-screen bg-[radial-gradient(circle_at_100%_40%,_#7226FF_0%,_#AC8FDB_100%)] text-white overflow-hidden relative md:py-[200px] py-[100px]">
       <div className="w-full items-center text-center flex flex-col  justify-center gap-16">
-        <div className="w-[311px] md:w-[857px] z-[6]">
-          <span className=" bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[34px]/[42.3px] md:text-[72px]/[80px]">
-            Nominasi Essay <br /> Terbaik
-          </span>
-        </div>
+        <BlurFade inView delay={0.25 * 2}>
+          <div className="w-[311px] md:w-[857px] z-[6]">
+            <span className=" bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[34px]/[42.3px] md:text-[72px]/[80px]">
+              Nominasi Essay <br /> Terbaik
+            </span>
+          </div>
+        </BlurFade>
 
-        <DetailEssay id={activeTab} />
+        <BlurFade inView delay={0.25 * 3}>
+          <DetailEssay id={activeTab} />
+        </BlurFade>
 
-        <div className="flex border border-white backdrop-blur-sm w-full max-w-[800px] max-sm:w-[343px] divide-x divide-white">
-          {essay.map((item, idx) => (
-            <div
-              key={idx}
-              className={`p-6 w-full cursor-pointer hover:[text-shadow:0_0_8px_#F3ECFF] transition-all duration-200 ${activeTab === idx ? "[text-shadow:0_0_8px_#F3ECFF] bg-white/30" : "bg-white/20"}`}
-              onClick={() => setActiveTab(idx)}
-            >
-              <span className={` bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[24px]/[32px]`}>{item.id}</span>
-            </div>
-          ))}
-        </div>
+        <BlurFade inView delay={0.25 * 4}>
+          <div className="flex border border-white backdrop-blur-sm w-full max-w-[800px] max-sm:w-[343px] divide-x divide-white">
+            {essay.map((item, idx) => (
+              <div
+                key={idx}
+                className={`p-6 w-full cursor-pointer hover:[text-shadow:0_0_8px_#F3ECFF] transition-all duration-200 ${activeTab === idx ? "[text-shadow:0_0_8px_#F3ECFF] bg-white/30" : "bg-white/20"}`}
+                onClick={() => setActiveTab(idx)}
+              >
+                <span className={` bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[24px]/[32px]`}>{item.id}</span>
+              </div>
+            ))}
+          </div>
+        </BlurFade>
       </div>
     </div>
   );
