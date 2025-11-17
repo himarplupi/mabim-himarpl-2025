@@ -1,6 +1,21 @@
 "use client";
 import Image from "next/image";
-import temp from "@/assets/akane syg.png";
+import day1_1 from "@/assets/day1/d1_1.jpg";
+import day1_2 from "@/assets/day1/d1_2.jpg";
+import day1_3 from "@/assets/day1/d1_3.jpg";
+import day1_4 from "@/assets/day1/d1_4.jpg";
+import day2_1 from "@/assets/day2/d2_1.jpg";
+import day2_2 from "@/assets/day2/d2_2.jpg";
+import day2_3 from "@/assets/day2/d2_3.jpg";
+import day2_4 from "@/assets/day2/d2_4.jpg";
+import day3_1 from "@/assets/day3/d3_1.jpg";
+import day3_2 from "@/assets/day3/d3_2.jpg";
+import day3_3 from "@/assets/day3/d3_3.jpg";
+import day3_4 from "@/assets/day3/d3_4.jpg";
+import day4_1 from "@/assets/day4/d4_1.jpg";
+import day4_2 from "@/assets/day4/d4_2.jpg";
+import day4_3 from "@/assets/day4/d4_3.jpg";
+import day4_4 from "@/assets/day4/d4_4.jpg";
 import wink from "@/assets/mascots/smile3.svg";
 import shield from "@/assets/mascots/shield.svg";
 import dokumSvg from "@/assets/ornaments/dokumentasi.svg";
@@ -14,19 +29,19 @@ export default function Docum() {
   const dokum = [
     {
       day: "DAY-I",
-      images: [{ src: temp }, { src: temp }, { src: temp }, { src: temp }],
+      images: [{ src: day1_1 }, { src: day1_2 }, { src: day1_3 }, { src: day1_4 }],
     },
     {
       day: "DAY-II",
-      images: [{ src: temp }, { src: temp }, { src: temp }, { src: temp }],
+      images: [{ src: day2_1 }, { src: day2_2 }, { src: day2_3 }, { src: day2_4 }],
     },
     {
       day: "DAY-III",
-      images: [{ src: temp }, { src: temp }, { src: temp }, { src: temp }],
+      images: [{ src: day3_1 }, { src: day3_2 }, { src: day3_3 }, { src: day3_4 }],
     },
     {
       day: "DAY-IV",
-      images: [{ src: temp }, { src: temp }, { src: temp }, { src: temp }],
+      images: [{ src: day4_1 }, { src: day4_2 }, { src: day4_3 }, { src: day4_4 }],
     },
   ];
 
