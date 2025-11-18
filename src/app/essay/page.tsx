@@ -41,7 +41,7 @@ export default function Essai() {
           <DetailEssay id={activeTab} />
         </BlurFade>
 
-        <BlurFade inView delay={0.25 * 4}>
+        <BlurFade inView delay={0.25 * 4} className="w-full mx-auto flex justify-center items-center">
           <div className="flex border border-white backdrop-blur-sm w-full max-w-[800px] max-sm:w-[343px] divide-x divide-white">
             {essay.map((item, idx) => (
               <div
@@ -61,7 +61,7 @@ export default function Essai() {
 
 function DetailEssay({ id }: { id: number }) {
   return (
-    <div className="flex md:flex-row flex-col items-center gap-12">
+    <div className="flex md:flex-row flex-col items-start gap-12">
       <Image src={essay[id].img} className="w-[343px] md:h-auto h-[343px] " alt="essay" />
       <div className="flex flex-col gap-4 md:w-[400px] text-start w-[343px]">
         <span className=" bg-gradient-to-r from-white/50 via-white to-white/50 bg-clip-text text-transparent font-ethno text-[34px]/[42.3px] md:text-[40px]/[50px]">{essay[id].title}</span>
